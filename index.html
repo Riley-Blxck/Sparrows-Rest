@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com data:; connect-src 'self' https://api.openweathermap.org;">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Sparrow's Rest | Luxury Lodge Retreat</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/sparrows_rest.svg" alt="Sparrow's Rest Logo" class="logo">
+            </a>
+            
+            <button class="navbar-toggler navbar-toggler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Lodge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="weather-widget ms-3">
+                    <i class="fas fa-sun"></i>
+                    <span id="temperature">Loading...</span>
+                    <span class="city-code">BYO</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1>Welcome to <span class="highlight">Sparrow's Rest</span></h1>
+                    <p class="lead">Your luxury lodge retreat in the heart of Bulawayo. Experience tranquility, comfort, and authentic African hospitality.</p>
+                    <a href="rooms.html" class="btn btn-warning btn-lg">Explore Our Rooms</a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-3 shadow">
+                            <div class="carousel-item active">
+                                <img src="images/carousel_1.jpg" class="d-block w-100" alt="Sparrow's Rest Exterior">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/carousel_2.jpg" class="d-block w-100" alt="Garden View">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/carousel_3.jpg" class="d-block w-100" alt="Room Interior">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Local Attractions & Activities</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="attraction-card">
+                        <img src="images/khami.jpg" alt="Khami Ruins" class="img-fluid">
+                        <div class="attraction-info">
+                            <h3>Khami Ruins</h3>
+                            <p>Explore this UNESCO World Heritage site featuring impressive stone structures and rich history.</p>
+                            <div class="attraction-details">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 22km away</span>
+                                <span class="duration"><i class="fas fa-clock"></i> Half-day trip</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="attraction-card">
+                        <img src="images/matopo.jpg" alt="Matobo National Park" class="img-fluid">
+                        <div class="attraction-info">
+                            <h3>Matobo National Park</h3>
+                            <p>Home to ancient rock art, diverse wildlife, and Cecil Rhodes' grave site with panoramic views.</p>
+                            <div class="attraction-details">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 35km away</span>
+                                <span class="duration"><i class="fas fa-clock"></i> Full-day trip</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="attraction-card">
+                        <img src="images/museum.jpg" alt="Railway Museum" class="img-fluid">
+                        <div class="attraction-info">
+                            <h3>Railway Museum</h3>
+                            <p>Discover Zimbabwe's railway heritage with vintage steam locomotives and historical exhibits.</p>
+                            <div class="attraction-details">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 3km away</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 2-3 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activities Section -->
+            <div class="activities-section mt-5">
+                <h3 class="text-center mb-4" data-aos="fade-up">Available Activities</h3>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="activity-item">
+                            <i class="fas fa-hiking"></i>
+                            <h4>Guided Nature Walks</h4>
+                            <p>Explore local flora and fauna with our experienced guides</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="activity-item">
+                            <i class="fas fa-camera"></i>
+                            <h4>Photography Tours</h4>
+                            <p>Capture the beauty of Matobo's landscapes and wildlife</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="activity-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <h4>Cultural Workshops</h4>
+                            <p>Learn about local crafts and traditional practices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>About Us</h4>
+                    <p>Sparrow's Rest is a luxury lodge in Bulawayo, offering comfortable accommodation and authentic African hospitality in a serene setting.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Lodge</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +263 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@sparrowsrest.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Example Street, Bulawayo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
